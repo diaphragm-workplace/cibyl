@@ -12,3 +12,14 @@ res/
 *.jar
 *.jad
 .jar_built
+
+/toolchain/crosstool-ng-1.28.0/
+/toolchain/crosstool_install/
+/toolchain/toolchain_build/
+/toolchain/x-tools/
+/toolchain/jasmin-2.4/
+
+/toolchain/*.tar.bz2
+/toolchain/*.zip
+
+/toolchain/mips-cibyl-elf.tar.bz2
