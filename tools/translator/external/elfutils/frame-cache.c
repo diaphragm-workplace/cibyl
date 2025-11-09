@@ -53,6 +53,7 @@
 
 #include "cfi.h"
 #include <search.h>
+#include <search_hack.h>
 #include <stdlib.h>
 
 

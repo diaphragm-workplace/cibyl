@@ -53,6 +53,7 @@
 #endif
 
 #include <search.h>
+#include <search_hack.h>
 #include <stdlib.h>
 
 #include "libdwP.h"

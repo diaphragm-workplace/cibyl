@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 2.6)
 set(CMAKE_LEGACY_CYGWIN_WIN32 0) # Remove when CMake >= 2.8.4 is required
+# ^^ something *probably* has to be done about this
 
 # ====================================
 # project name and version
@@ -54,6 +55,7 @@ set(CMAKE_BUILD_TYPE distribution)
 set(CMAKE_CXX_FLAGS_DISTRIBUTION "-Os -Wa,--no-warn -fno-optimize-sibling-calls")
 set(CMAKE_C_FLAGS_DISTRIBUTION "-Os -Wa,--no-warn -fno-optimize-sibling-calls")
 
+# add syscalls/ansi include directory globally
 add_subdirectory (include)
 add_subdirectory (tools)
 add_subdirectory (syscalls)
