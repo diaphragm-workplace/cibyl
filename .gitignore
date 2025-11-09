@@ -33,3 +33,4 @@ res/
 /build/mips-cibyl-elf/
 /build/syscalls/
 /build/tools/
+/build/install_manifest.txt

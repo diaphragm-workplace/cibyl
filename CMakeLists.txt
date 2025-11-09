@@ -55,7 +55,6 @@ set(CMAKE_BUILD_TYPE distribution)
 set(CMAKE_CXX_FLAGS_DISTRIBUTION "-Os -Wa,--no-warn -fno-optimize-sibling-calls")
 set(CMAKE_C_FLAGS_DISTRIBUTION "-Os -Wa,--no-warn -fno-optimize-sibling-calls")
 
-# add syscalls/ansi include directory globally
 add_subdirectory (include)
 add_subdirectory (tools)
 add_subdirectory (syscalls)
