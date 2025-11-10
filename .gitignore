@@ -34,3 +34,5 @@ res/
 /build/syscalls/
 /build/tools/
 /build/install_manifest.txt
+
+/example/j2me/hello-world/program

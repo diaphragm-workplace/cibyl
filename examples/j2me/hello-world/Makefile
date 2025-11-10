@@ -20,6 +20,7 @@ midlet.jar: tmpclasses/Cibyl.j
 	install -d res
 	cp `cibyl-config --prefix`/mips-cibyl-elf/sys-root/usr/share/java/Main.java tmpclasses
 	cp `cibyl-config --prefix`/mips-cibyl-elf/sys-root/usr/share/java/GameScreenCanvas.java tmpclasses
+	cp `cibyl-config --prefix`/mips-cibyl-elf/sys-root/usr/share/java/CRunTime.java tmpclasses # <--- isn't this supposed to be pregenerated?
 	javac -d tmpclasses -classpath tmpclasses -source 1.4 -bootclasspath $(WTK_PATH)/lib/cldcapi11.jar:$(WTK_PATH)/lib/midpapi20.jar -source 1.4 tmpclasses/*.java
 	preverify -classpath $(WTK_PATH)/lib/cldcapi11.jar:$(WTK_PATH)/lib/midpapi20.jar -d classes tmpclasses
 	cp tmpclasses/program.data.bin res

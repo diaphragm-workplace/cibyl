@@ -3,5 +3,3 @@
 P=`dirname $0`
 
 $P/mips-cibyl-elf-ld.real -EB --emit-relocs $*
-
-
