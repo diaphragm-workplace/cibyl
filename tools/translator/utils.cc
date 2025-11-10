@@ -81,11 +81,11 @@ void *read_cpp(size_t *out_size, const char **defines, const char *fmt, ...)
 
   f = popen(path, "r");
   panic_if(!f, "popen %s failed\n", path);
-  data = xcalloc(buf.st_size * 64 + 1, 1); // or maybe just remove -C because license info is pretty big...
+  data = xcalloc(buf.st_size * 4 + 1, 1);
 
-  while ( (size = fread(data, 1, buf.st_size * 64, f)) != 0)
+  while ( (size = fread(data, 1, buf.st_size * 4, f)) != 0)
     {
-      panic_if (size != 0 && size >= (size_t)(buf.st_size * 64),
+      panic_if (size != 0 && size >= (size_t)(buf.st_size * 4),
                 "Outbuffer of %s is too large: more than %ld\n",
                 path, buf.st_size * 64);
     }
