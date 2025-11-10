@@ -62,7 +62,8 @@ void *read_cpp(size_t *out_size, const char **defines, const char *fmt, ...)
            "Strlen too large in CPP pipe\n");
 
   /* pipe cpp, -C menas keep comments, -P means emit no line information */
-  l = snprintf(path, 2048, "%s -C -P ", cpp);
+  // but comments overflow everything, so let's disable them, what could possibly go wrong?
+  l = snprintf(path, 2048, "%s -P ", cpp);
   for (int i = 0; defines[i]; i++)
     {
       const char *def = defines[i];
